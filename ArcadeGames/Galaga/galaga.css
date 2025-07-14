@@ -1,0 +1,138 @@
+body {
+    background: #181c24;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff2;
+}
+
+#galaga-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+#galaga-score-table-container {
+    background: #181818;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000a;
+    width: 350px;
+    min-width: 200px;
+}
+
+#galaga-score-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+#galaga-score-table th, #galaga-score-table td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+#galaga-score-table th {
+    background: #222;
+    color: #0ff;
+}
+
+#galaga-score-table tbody tr:nth-child(1) td {
+    background: #0ff2;
+    font-weight: bold;
+}
+
+#galaga-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+#galaga-canvas {
+    background: #111;
+    border: 4px solid #0ff;
+    box-shadow: 0 0 20px #0ff8;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 2/3;
+    display: block;
+}
+
+#galaga-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-btn {
+    padding: 10px 20px;
+    background: #0af;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+.game-btn:hover {
+    background: #08c;
+}
+
+.back-menu {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+@media (max-width: 900px) {
+    #galaga-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #galaga-score-table-container {
+        width: 100%;
+        min-width: unset;
+        max-width: 350px;
+    }
+    #galaga-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    #galaga-score-table th, #galaga-score-table td {
+        font-size: 0.9rem;
+        padding: 4px 6px;
+    }
+    #galaga-score-table-container {
+        padding: 10px 5px;
+    }
+    .game-btn {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+} 

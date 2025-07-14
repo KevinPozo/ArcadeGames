@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaga</title>
+    <link rel="stylesheet" href="galaga.css">
+</head>
+<body>
+    <button onclick="window.location.href='../index.html'" class="back-menu game-btn">&larr; Volver al menú</button>
+    <h1>Galaga</h1>
+    <div id="galaga-layout">
+        <div id="galaga-score-table-container">
+            <h2>Historial de puntajes</h2>
+            <table id="galaga-score-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se insertarán los puntajes -->
+                </tbody>
+            </table>
+        </div>
+        <div id="galaga-container">
+            <canvas id="galaga-canvas" width="320" height="480"></canvas>
+            <div id="galaga-info">
+                <p>Puntaje: <span id="galaga-score">0</span></p>
+                <button id="galaga-start-btn" class="game-btn">Iniciar Juego</button>
+            </div>
+        </div>
+    </div>
+    <script src="galaga.js"></script>
+</body>
+</html> 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botón de navegación al menú principal -->
+    <a href="index.html" style="position:absolute;left:20px;top:20px;color:#0af;text-decoration:underline;font-size:1.1rem;">&larr; Volver al menú</a>
+    
+    <!-- Título del juego -->
+    <h1>Tetris</h1>
+    
+    <!-- Layout principal del juego -->
+    <div id="tetris-layout">
+        <!-- Panel de puntajes históricos -->
+        <div id="score-table-container">
+            <h2>Historial de puntajes</h2>
+            <table id="score-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los puntajes se insertan dinámicamente desde JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Área de juego principal -->
+        <div id="tetris-container">
+            <!-- Canvas donde se renderiza el juego -->
+            <canvas id="tetris" width="320" height="640"></canvas>
+            
+            <!-- Panel de información y controles -->
+            <div id="info">
+                <p>Puntaje: <span id="score">0</span></p>
+                <button id="start-btn">Iniciar Juego</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script principal del juego -->
+    <script src="script.js"></script>
+</body>
+</html> 

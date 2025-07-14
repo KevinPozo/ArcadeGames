@@ -1,0 +1,181 @@
+/* Estilos base del cuerpo de la página */
+body {
+    background: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo del título principal con efectos de luz */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0af, 0 0 20px #0af2;
+}
+
+/* Layout principal para organizar elementos */
+#tetris-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Contenedor de la tabla de puntajes */
+#score-table-container {
+    margin-top: 0;
+    background: #181818;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000a;
+    width: 350px;
+    min-width: 200px;
+}
+
+/* Estilos de la tabla de puntajes */
+#score-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+#score-table th, #score-table td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+#score-table th {
+    background: #222;
+    color: #0af;
+}
+
+/* Resaltar el primer lugar */
+#score-table tbody tr:nth-child(1) td {
+    background: #0af2;
+    font-weight: bold;
+}
+
+/* Contenedor del área de juego */
+#tetris-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+/* Canvas del juego con bordes y sombras */
+#tetris {
+    background: #111;
+    border: 4px solid #444;
+    box-shadow: 0 0 20px #000a;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1/2;
+    display: block;
+}
+
+/* Panel de información y controles */
+#info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos base para botones y enlaces de juego */
+button, .game-btn {
+    padding: 10px 20px;
+    background: #0af;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+button:hover, .game-btn:hover {
+    background: #08c;
+}
+
+/* Estilos específicos para enlaces que parecen botones */
+a.game-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #0af;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+a.game-btn:hover {
+    background: #08c;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Botón de navegación al menú principal */
+.back-menu {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #0af;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Estilos responsivos para pantallas medianas */
+@media (max-width: 900px) {
+    #tetris-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #score-table-container {
+        width: 100%;
+        min-width: unset;
+        max-width: 350px;
+    }
+    #tetris-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    #score-table th, #score-table td {
+        font-size: 0.9rem;
+        padding: 4px 6px;
+    }
+    #score-table-container {
+        padding: 10px 5px;
+    }
+    button, .game-btn {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+} 
