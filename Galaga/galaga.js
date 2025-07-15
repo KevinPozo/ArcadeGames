@@ -630,7 +630,7 @@ function updateGame() {
                 levelComplete = false;
             }, 2000);
         } else if (currentLevel === 5) {
-            // Iniciar boss final
+            // Iniciar boss final directamente
             levelComplete = true;
             showBossMessage = true;
             setTimeout(() => {
@@ -662,6 +662,10 @@ function updateGame() {
 
 // Generar nueva oleada de enemigos según el nivel
 function spawnEnemies() {
+    // Si es nivel 5, no generes enemigos, deja que la lógica principal invoque el boss
+    if (currentLevel === 5) {
+        return;
+    }
     enemies = [];
     const rows = 4; // Más filas para aprovechar el espacio horizontal
     const cols = 10; // Más columnas para el formato horizontal
