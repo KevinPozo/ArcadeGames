@@ -34,7 +34,7 @@ Un portal web de juegos arcade clásicos con sistema de autenticación integrado
 ### Configuración Local
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/ArcadeGames.git
+git clone https://github.com/KevinPozo/ArcadeGames.git
 cd ArcadeGames
 ```
 
@@ -133,7 +133,7 @@ El proyecto está optimizado para GitHub Pages:
 1. Sube el código a tu repositorio
 2. Activa GitHub Pages en Settings > Pages
 3. Selecciona la rama main como fuente
-4. ¡Tu portal estará disponible en `https://tu-usuario.github.io/ArcadeGames`!
+4. ¡Tu portal estará disponible en `https://kevinpozo.github.io/ArcadeGames/`!
 
 ## 🤝 Contribuciones
 
