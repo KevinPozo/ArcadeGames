@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaga</title>
+    <title>Galaga - Arcade Games</title>
     <link rel="stylesheet" href="galaga.css">
 </head>
 <body>
@@ -25,10 +25,24 @@
             </table>
         </div>
         <div id="galaga-container">
-            <canvas id="galaga-canvas" width="320" height="480"></canvas>
+            <canvas id="galaga-canvas" width="800" height="400"></canvas>
             <div id="galaga-info">
                 <p>Puntaje: <span id="galaga-score">0</span></p>
+                <p>Nivel: <span id="galaga-level">1</span></p>
+                <p>Vida: <span id="galaga-health">100</span></p>
                 <button id="galaga-start-btn" class="game-btn">Iniciar Juego</button>
+            </div>
+            <div id="galaga-instructions">
+                <h3>Instrucciones:</h3>
+                <ul>
+                    <li>Flechas ← → para mover</li>
+                    <li>Espacio para disparar</li>
+                    <li>5 niveles con diferentes enemigos</li>
+                    <li>Enemigos disparan desde nivel 1</li>
+                    <li>Disparo doble desde nivel 3</li>
+                    <li>Boss final con temporizador de 30s</li>
+                    <li>¡Evita las balas enemigas!</li>
+                </ul>
             </div>
         </div>
     </div>
