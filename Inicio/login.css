@@ -1,0 +1,121 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', 'Courier New', Courier, monospace;
+    color: #00fff7;
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(20, 20, 40, 0.95);
+    border: 2px solid #00fff7;
+    border-radius: 16px;
+    box-shadow: 0 0 24px #00fff7, 0 0 8px #39ff14;
+    padding: 40px 32px;
+    width: 320px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7, 0 0 2px #fff;
+}
+
+label {
+    display: block;
+    margin: 16px 0 4px 0;
+    color: #fff;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #00fff7;
+    border-radius: 8px;
+    background: #181830;
+    color: #00fff7;
+    font-size: 1em;
+    margin-bottom: 16px;
+    outline: none;
+    box-shadow: 0 0 8px #00fff7 inset;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00fff7;
+    color: #181830;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00fff7, 0 0 2px #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+    background: #39ff14;
+    color: #181830;
+}
+
+a {
+    color: #00fff7;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #39ff14;
+}
+
+.error {
+    color: #ff1744;
+    margin-top: 12px;
+    min-height: 20px;
+    text-shadow: 0 0 4px #fff;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    flex: 1;
+    padding-right: 38px;
+    margin-bottom: 0;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7, 0 0 2px #fff;
+    user-select: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    background: none;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+.toggle-password:hover {
+    color: #39ff14;
+    text-shadow: 0 0 12px #39ff14, 0 0 4px #fff;
+}
+
+input[type="password"] {
+    margin-bottom: 16px;
+} 

@@ -1,62 +1,159 @@
-# Arcade Games
+# 🎮 ArcadeGames - Portal de Juegos Retro
 
-Este proyecto contiene una colección de juegos clásicos de arcade desarrollados en HTML, CSS y JavaScript. Cada juego está organizado en su propia carpeta para facilitar su mantenimiento y ejecución.
+Un portal web de juegos arcade clásicos con sistema de autenticación integrado, desarrollado con HTML, CSS y JavaScript vanilla.
 
-## Estructura del proyecto
+## ✨ Características
+
+### 🎯 Sistema de Autenticación
+- **Registro de usuarios** con validación completa
+- **Inicio de sesión** seguro con encriptación SHA-256
+- **Datos protegidos**: Username, email, password, nombre y apellido encriptados
+- **Almacenamiento local**: Todos los usuarios se guardan en localStorage del navegador
+- **Interfaz arcade**: Diseño retro con colores neón y efectos visuales
+
+### 🎮 Juegos Disponibles
+- **Bomberman** - Juego de explosiones y estrategia
+- **Galaga** - Shooter espacial clásico
+- **Pac-Man Terror** - Versión terrorífica del come-dots
+- **Pong** - Tenis de mesa retro
+- **Slender Mini** - Juego de supervivencia
+- **Tetris** - Puzzle de bloques clásico
+
+### 🛡️ Seguridad
+- **Encriptación SHA-256** para todos los datos sensibles
+- **Validación de formularios** en tiempo real
+- **Protección de rutas** - Acceso solo para usuarios autenticados
+- **Gestión de sesiones** con sessionStorage
+
+## 🚀 Instalación y Uso
+
+### Requisitos
+- Navegador web moderno
+- Servidor local (recomendado para desarrollo)
+
+### Configuración Local
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/ArcadeGames.git
+cd ArcadeGames
+```
+
+2. Inicia un servidor local:
+```bash
+# Con Python 3
+python3 -m http.server 8000
+
+# Con Node.js
+npx serve .
+```
+
+3. Abre tu navegador y ve a `http://localhost:8000`
+
+### Uso
+1. **Registro**: Crea una cuenta con tu nombre de usuario, email y contraseña
+2. **Login**: Inicia sesión con tus credenciales
+3. **Jugar**: Accede a cualquiera de los juegos arcade disponibles
+
+## 📁 Estructura del Proyecto
 
 ```
 ArcadeGames/
-├── Galaga/          # Juego de nave espacial vs enemigos
-│   ├── galaga.css
-│   ├── galaga.html
-│   ├── galaga.js
-│   └── index.html
-├── Tetris/          # Juego clásico de bloques
-│   ├── index.html
-│   ├── menu.css
-│   └── tetris.html
-├── Pong/            # Juego de tenis para dos jugadores
-│   ├── index.html
-│   ├── pong.css
-│   └── pong.js
-├── Bomberman/       # Juego de bombas y explosiones
-│   ├── bomberman.css
-│   ├── bomberman.js
-│   └── index.html
-├── SlenderMini/     # Juego de terror y supervivencia
-│   ├── index.html
-│   ├── slender.css
-│   └── slender.js
-├── PacManTerror/    # Versión terror de Pac-Man
-│   ├── index.html
-│   ├── pacman.css
-│   └── pacman.js
-├── Menu/            # Recursos compartidos y estilos del menú
-│   ├── menu.css
-│   ├── script.js
-│   └── style.css
-├── index.html       # Menú principal para elegir el juego
-└── README.md        # Documentación del proyecto
+├── index.html              # 🚪 Página de login (entrada principal)
+├── README.md              # 📚 Documentación completa
+└── Inicio/               # 🎮 Contenido principal
+    ├── index.html        #  Menú de juegos
+    ├── register.html     #  Página de registro
+    ├── login.css         #  Estilos del login
+    ├── login.js          # ⚙️ Lógica del login
+    ├── register.css      # 🎨 Estilos del registro
+    ├── register.js       # ⚙️ Lógica del registro
+    └── [Juegos]/         # 🎮 Todos tus juegos
 ```
 
-## Características principales
+## 🔧 Tecnologías Utilizadas
 
-- **Juegos clásicos**: Galaga, Tetris, Pong, Bomberman, Slender Mini y Pac-Man Terror
-- **Sistema de puntajes**: Cada juego guarda los mejores puntajes en localStorage
-- **Diseño responsivo**: Se adapta a diferentes tamaños de pantalla
-- **Controles intuitivos**: Teclado y mouse para todos los juegos
-- **Efectos visuales**: Luces, sombras y animaciones para mejor experiencia
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Autenticación**: SHA-256 para encriptación
+- **Almacenamiento**: localStorage + sessionStorage
+- **Diseño**: CSS Grid, Flexbox, Animaciones CSS
+- **Hosting**: GitHub Pages
 
-## ¿Cómo iniciar?
+## 🎨 Características de Diseño
 
-1. Abre el archivo `index.html` en tu navegador web
-2. Selecciona el juego que deseas jugar desde el menú principal
-3. Sigue las instrucciones específicas de cada juego
+- **Tema Arcade**: Colores neón (azul/celeste, verde fosforescente)
+- **Tipografía Retro**: Fuentes tipo arcade
+- **Efectos Visuales**: Sombras neón, gradientes, animaciones
+- **Responsive**: Adaptable a diferentes tamaños de pantalla
+- **UX Intuitiva**: Navegación clara y feedback visual
 
-## Controles generales
+## 🔐 Seguridad
 
-- **Navegación**: Usa el botón "Volver al menú" para regresar al menú principal
-- **Puntajes**: Los mejores puntajes se guardan automáticamente
-- **Responsividad**: Los juegos se adaptan automáticamente al tamaño de la pantalla
+### Encriptación de Datos
+Todos los datos sensibles se encriptan usando SHA-256:
+- Nombre de usuario
+- Email
+- Contraseña
+- Nombre y apellido
 
-¡Disfruta jugando todos los juegos clásicos de arcade! 
+### Estructura de Datos en localStorage
+```js
+[
+  {
+    username: "hash_sha256_del_username",
+    email: "correo@ejemplo.com",
+    password: "hash_sha256_de_la_contraseña",
+    nombre: "Nombre",
+    apellido: "Apellido",
+    edad: 25,
+    fechaRegistro: "2024-01-15T10:30:00.000Z"
+  }
+]
+```
+
+## 🎯 Funcionalidades Destacadas
+
+### Sistema de Login/Registro
+- ✅ Validación de formularios en tiempo real
+- ✅ Encriptación SHA-256 de datos sensibles
+- ✅ Prevención de usuarios duplicados
+- ✅ Interfaz con efectos neón arcade
+- ✅ Toggle para mostrar/ocultar contraseñas
+- ✅ Redirección automática post-autenticación
+
+### Gestión de Sesiones
+- ✅ Verificación de autenticación en cada página
+- ✅ Almacenamiento seguro en sessionStorage
+- ✅ Logout automático al cerrar navegador
+- ✅ Protección de rutas privadas
+
+## 🚀 Despliegue
+
+### GitHub Pages
+El proyecto está optimizado para GitHub Pages:
+1. Sube el código a tu repositorio
+2. Activa GitHub Pages en Settings > Pages
+3. Selecciona la rama main como fuente
+4. ¡Tu portal estará disponible en `https://tu-usuario.github.io/ArcadeGames`!
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas:
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👨‍💻 Autor
+
+**Kevin Fernando Pozo Maldonado** - [kevinferpozo@gmail.com](mailto:kevinferpozo@gmail.com)
+
+Proyecto desarrollado como portafolio personal para demostrar habilidades en desarrollo web frontend, sistemas de autenticación y diseño de interfaces retro.
+
+---
+
+⭐ **¡Dale una estrella al proyecto si te gustó!** 

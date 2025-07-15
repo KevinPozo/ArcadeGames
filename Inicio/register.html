@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - ArcadeGames</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registro de Usuario</h2>
+        <form id="registerForm">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="6" required>
+            <label for="password">Contraseña:</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" required>
+                <span id="togglePassword" class="toggle-password" title="Mostrar/ocultar contraseña">🔒</span>
+            </div>
+            <label for="confirmPassword">Confirmar contraseña:</label>
+            <div class="password-wrapper">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span id="toggleConfirmPassword" class="toggle-password" title="Mostrar/ocultar contraseña">🔒</span>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="../index.html">Inicia sesión aquí</a></p>
+        <div id="registerError" class="error"></div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html> 

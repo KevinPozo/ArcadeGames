@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - ArcadeGames</title>
+    <link rel="stylesheet" href="../Menu/style.css">
+</head>
+<body>
+    <button id="logoutBtn" class="menu-btn" style="position:absolute;top:20px;right:20px;">Cerrar sesión</button>
+    <!-- Título principal del portal de juegos -->
+    <h1>Arcade Games</h1>
+    
+    <!-- Menú principal con enlaces a todos los juegos -->
+    <div id="main-menu">
+        <a href="../Bomberman/index.html" class="game-btn">Jugar Bomberman</a>
+        <a href="../Galaga/index.html" class="game-btn">Jugar Galaga</a>
+        <a href="../PacManTerror/index.html" class="game-btn">Jugar Pac-Man Terror</a>
+        <a href="../Pong/index.html" class="game-btn">Jugar Pong</a>
+        <a href="../SlenderMini/index.html" class="game-btn">Jugar Slender Mini</a>
+        <a href="../Tetris/index.html" class="game-btn">Jugar Tetris</a>
+    </div>
+    <script>
+        // Redirige a login si no hay usuario logueado
+        if (!sessionStorage.getItem('arcadeCurrentUser')) {
+            window.location.href = '../index.html';
+        }
+        // Lógica del botón de cerrar sesión
+        document.getElementById('logoutBtn').onclick = function() {
+            sessionStorage.removeItem('arcadeCurrentUser');
+            window.location.href = '../index.html';
+        };
+    </script>
+</body>
+</html> 
